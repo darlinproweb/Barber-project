@@ -148,6 +148,9 @@ export default function Home() {
           <p className="text-xs text-slate-400">
             © 2026 Barbershop Queue. Sistema inteligente de gestión de turnos.
           </p>
+          <p className="mt-2 text-[10px] text-slate-300 font-mono">
+            v1.1 (PWA Ready + Fix)
+          </p>
         </div>
       </footer>
     </div>
