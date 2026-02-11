@@ -1,0 +1,17 @@
+{
+    "name": "Barbershop Queue",
+    "short_name": "BarberQueue",
+    "description": "Sistema de gestión de colas para barberías",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#111827",
+    "theme_color": "#111827",
+    "icons": [
+        {
+            "src": "/icons/icon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -6,14 +6,17 @@
 import { createClient } from '@supabase/supabase-js';
 import type { QueueItem } from '@/app/types';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Supabase credentials are missing. Please check your .env.local file.');
+  console.warn('⚠️ Supabase credentials are missing. Check .env.local or Netlify settings.');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(
+  supabaseUrl || 'https://placeholder.supabase.co',
+  supabaseAnonKey || 'placeholder'
+);
 
 // ─── Client-side: get queue position ───
 
